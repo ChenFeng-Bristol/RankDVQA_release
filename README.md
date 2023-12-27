@@ -62,7 +62,7 @@ python test_bvivfi_fast.py --model_path=./exp/stanet/stanet_epoch_20.pth --json_
 
 
 ## Citation
-
+```
 @InProceedings{Feng_2024_WACV,
     author    = {Feng, Chen and Danier, Duolikun and Zhang, Fan and Bull, David},
     title     = {RankDVQA: Deep VQA Based on Ranking-Inspired Hybrid Training},
