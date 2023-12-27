@@ -33,13 +33,12 @@ Please fill the [registration form](https://forms.office.com/e/5QeYmKsZzA) to ge
 
 2. Stage1: Run the training codes of PQANet
 ```bash
-cd PQANet
 python train.py --model=multiscale_v33 --expdir=./models/
 ```
 3. Extract the feature and prodicted scores from PQANet
 ```bash
 cd STANet
-python ./STANet/data_generation.py --json_path=./path_to_database_json_file.json/
+python ./data_generation.py --json_path=./path_to_database_json_file.json/
 ```
 4. Stage2: Run the training codes of STANet
 ```bash
@@ -49,7 +48,6 @@ python train.py --pretrained_model_path=./models/FR_model --json_path=./path_to_
 ### Usage
 1. Run the testing code of PQANet: 
 ```bash
-cd PQANet
 python test.py --database=./path_to_database/ --width=1920 --height=1080 --bitDepth=8
 ```
 
