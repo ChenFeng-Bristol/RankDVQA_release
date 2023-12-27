@@ -13,7 +13,7 @@ parser.add_argument('--learning_rate', type=float, default=0.001, help="Learning
 parser.add_argument('--epochs', type=int, default=3000, help="Number of epochs to train.")
 parser.add_argument('--device', type=str, default="cuda" if torch.cuda.is_available() else "cpu", help="Device to use for training (cuda/cpu).")
 parser.add_argument('--save_path', type=str, default="./exp/stanet/", help="Path to save the trained models.")
-parser.add_argument('--json_path', type=str, default='path_to_json_file.json', help="Path to the JSON file for the VideoQualityDataset.")
+parser.add_argument('--data_path', type=str, default='path_to_generatred_data_file', help="Path to the data pkl file for the VideoQualityDataset.")
 parser.add_argument('--batch_size', type=int, default=1, help="Batch size for training.")
 parser.add_argument('--pretrained_model_path', type=str, default='./exp/FR_model', help="Path to the pretrained model for the Extractor.")
 
@@ -38,7 +38,7 @@ def load_pretrained_weights(extractor, path, device):
 def train(model, optimizer, criterion, device):
     total_loss = 0
     count = 0
-    with open('./data_modi_multi_up1.pkl', 'rb') as f:
+    with open('./data_VMAFplus.pkl', 'rb') as f:
         while True:
             try:
                 optimizer.zero_grad()

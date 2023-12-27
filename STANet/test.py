@@ -22,7 +22,6 @@ def test(model, dataloader, device):
     with torch.no_grad():
         for Feature_layer_combine1, mos1, patch_quality_score1 in dataloader:
             mos1 = mos1.float().to(device)
-            print(len(patch_quality_score1))
             clip_num = len(patch_quality_score1) // (10 * 9 * 16)
             stanet_output = []
             scores1 = torch.cat(patch_quality_score1, dim=0).to(device)
@@ -32,12 +31,12 @@ def test(model, dataloader, device):
                 scores1_segment = scores1[start_idx:end_idx]
                 Feature_layer_combine1_segment = Feature_layer_combine1[start_idx:end_idx]
                 stanet_output1 = model(scores1_segment, Feature_layer_combine1_segment)
-                print(stanet_output1)
                 stanet_output.append(stanet_output1)
             stanet_output_np = [output.cpu().numpy() for output in stanet_output]
+            
             mean_score = np.mean(np.concatenate(stanet_output_np))
             print(mean_score)
-            
+
             predictions.extend([mean_score])
             ground_truths.extend(mos1.cpu().numpy())
 
