@@ -9,7 +9,7 @@ RankDVQA: Deep VQA based on Ranking-inspired Hybrid Training, <br>
 
 in IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2024.
 
-### [Paper](https://openaccess.thecvf.com/content/WACV2024/papers/Feng_RankDVQA_Deep_VQA_Based_on_Ranking-Inspired_Hybrid_Training_WACV_2024_paper.pdf) | [Project](https://chenfeng-bristol.github.io/RankDVQA/) 
+### [Paper](https://openaccess.thecvf.com/content/WACV2024/html/Feng_RankDVQA_Deep_VQA_Based_on_Ranking-Inspired_Hybrid_Training_WACV_2024_paper.html) | [Project](https://chenfeng-bristol.github.io/RankDVQA/) 
 
 
 We propose new VQA methods based on a two-stage training methodology which motivates us to develop a large-scale VQA training database without employing human subjects to provide ground truth labels. This method was used to train a new transformer-based network architecture, exploiting the quality ranking of different distorted sequences rather than minimizing the difference from the ground-truth quality labels. The architecture of RankDVQA consists of two parts: the PQANet, which uses convolutional and SWIN transformer layers for feature extraction and local quality prediction, and the STANet, which refines the assessment using adaptive spatio-temporal pooling.
