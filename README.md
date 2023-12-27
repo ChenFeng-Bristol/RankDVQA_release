@@ -29,7 +29,7 @@ GPU memory: >= 16G
 Please fill the [registration form](https://forms.office.com/e/5QeYmKsZzA) to get access to the download link. I will then share the download link ASAP.
 
 ### Training 
-1. Download the RankDVQA dataset (Please fill the [registration form](https://forms.office.com/e/5QeYmKsZzA). 
+1. Download the RankDVQA dataset (Please fill the [registration form](https://forms.office.com/e/5QeYmKsZzA)). 
 
 2. Stage1: Run the training codes of PQANet
 ```bash
@@ -73,7 +73,7 @@ python test_bvivfi_fast.py --model_path=./exp/stanet/stanet_epoch_20.pth --json_
 }
 ```
 
-If you find any bugs of the code, feel free to send me an email: chen DOT feng AT bristol DOT ac DOT uk. 
+If you find any bugs of the code, feel free to send me an email: chen.feng@bristol.ac.uk. 
 
 ## Acknowledgments
 The authors appreciate the funding from the UKRI MyWorld Strength in Places Programme (SIPF00006/1), the University of Bristol, and the China Scholarship Council.
