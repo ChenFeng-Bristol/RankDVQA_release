@@ -46,10 +46,7 @@ python train.py --pretrained_model_path=./models/FR_model --data_path=./data_VMA
 ```
 
 ### Usage
-Stage 1: Run the testing code of PQANet: 
-```bash
-python test.py --database=./path_to_database/ --width=1920 --height=1080 --bitDepth=8
-```
+To make use of the test.py, the dataset folder names should be structured as follows.
 ```
 └──── <data directory>/
     ├──── database/
@@ -58,6 +55,12 @@ python test.py --database=./path_to_database/ --width=1920 --height=1080 --bitDe
     |   |   ├──── TEST/
     |   |   └──── subj_score.json
 ```
+
+Stage 1: Run the testing code of PQANet: 
+```bash
+python test.py --database=./path_to_database/ --width=1920 --height=1080 --bitDepth=8
+```
+
 In stage 1, evaluate the results with a simple arithmetic average operation for patches and save the predieted quality scores of the patches.
 
 Stage 2: Run the testing code of STANet:
