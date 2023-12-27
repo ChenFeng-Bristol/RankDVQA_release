@@ -38,7 +38,7 @@ python train.py --model=multiscale_v33 --expdir=./models/
 3. Extract the feature and prodicted scores from PQANet
 ```bash
 cd STANet
-python ./data_generation.py --json_path=./path_to_database_json_file.json/
+python data_generation.py --json_path=./path_to_database_json_file.json/
 ```
 4. Stage2: Run the training codes of STANet
 ```bash
