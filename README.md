@@ -31,7 +31,7 @@ Please fill the [registration form](https://forms.office.com/e/5QeYmKsZzA) to ge
 ### Training 
 1. Download the RankDVQA dataset (Please fill the [registration form](https://forms.office.com/e/5QeYmKsZzA)). 
 
-2. Stage1: Run the training codes of PQANet
+2. Stage 1: Run the training codes of PQANet
 ```bash
 python train.py --model=multiscale_v33 --expdir=./models/
 ```
@@ -40,22 +40,20 @@ python train.py --model=multiscale_v33 --expdir=./models/
 cd STANet
 python data_generation.py --json_path=./path_to_database_json_file.json
 ```
-4. Stage2: Run the training codes of STANet
+4. Stage 2: Run the training codes of STANet
 ```bash
 python train.py --pretrained_model_path=./models/FR_model --data_path=./data_VMAFplus.pkl --save_path=./exp/stanet/ 
 ```
 
 ### Usage
-1. Run the testing code of PQANet: 
+1. Stage 1: Run the testing code of PQANet: 
 ```bash
 python test.py --database=./path_to_database/ --width=1920 --height=1080 --bitDepth=8
 ```
 
-2. Run the testing code of STANet:
+2. Stage 2: Run the testing code of STANet:
 ```bash
 cd STANet
-python data_generation.py --database=./path_to_database/ --width=1920 --height=1080 --bitDepth=8
-
 python test.py --model_path=./exp/stanet/stanet_epoch_20.pth --json_path=./path_to_database_json_file.json
 ```
 
