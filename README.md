@@ -46,7 +46,7 @@ python train.py --pretrained_model_path=./models/FR_model --data_path=./data_VMA
 ```
 
 ### Usage
-1. Stage 1:Run the testing code of PQANet: 
+1. Stage 1: Run the testing code of PQANet: 
 ```bash
 python test.py --database=./path_to_database/ --width=1920 --height=1080 --bitDepth=8
 ```
