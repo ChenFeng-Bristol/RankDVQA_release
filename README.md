@@ -54,8 +54,6 @@ python test.py --database=./path_to_database/ --width=1920 --height=1080 --bitDe
 2. Run the testing code of STANet:
 ```bash
 cd STANet
-python data_generation.py --database=./path_to_database/ --width=1920 --height=1080 --bitDepth=8
-
 python test.py --model_path=./exp/stanet/stanet_epoch_20.pth --json_path=./path_to_database_json_file.json
 ```
 
