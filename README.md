@@ -12,7 +12,7 @@ in IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2024.
 ### [Paper](https://openaccess.thecvf.com/content/WACV2024/papers/Feng_RankDVQA_Deep_VQA_Based_on_Ranking-Inspired_Hybrid_Training_WACV_2024_paper.pdf) | [Project](https://chenfeng-bristol.github.io/RankDVQA/) 
 
 
-We proposes new VQA methods based on a two-stage training methodology which motivates us to develop a large-scale VQA training database without employing human subjects to provide ground truth labels. This method was used to train a new transformer-based network architecture, exploiting quality ranking of different distorted sequences rather than minimizing the difference from the ground-truth quality labels. The architecture of RankDVQA consists of two parts: the PQANet, which uses convolutional and SWIN transformer layers for feature extraction and local quality prediction, and the STANet, which refines the assessment using adaptive spatio-temporal pooling.
+We propose new VQA methods based on a two-stage training methodology which motivates us to develop a large-scale VQA training database without employing human subjects to provide ground truth labels. This method was used to train a new transformer-based network architecture, exploiting the quality ranking of different distorted sequences rather than minimizing the difference from the ground-truth quality labels. The architecture of RankDVQA consists of two parts: the PQANet, which uses convolutional and SWIN transformer layers for feature extraction and local quality prediction, and the STANet, which refines the assessment using adaptive spatio-temporal pooling.
 
 ### Framework
 <img src="figures/framework.png"> 
@@ -35,14 +35,14 @@ Please fill the [registration form](https://forms.office.com/e/5QeYmKsZzA) to ge
 ```bash
 python train.py --model=multiscale_v33 --expdir=./models/
 ```
-3. Extract the feature and prodicted scores from PQANet
+3. Extract the feature and predicted scores from PQANet
 ```bash
 cd STANet
-python data_generation.py --json_path=./path_to_database_json_file.json/
+python data_generation.py --json_path=./path_to_database_json_file.json
 ```
 4. Stage2: Run the training codes of STANet
 ```bash
-python train.py --pretrained_model_path=./models/FR_model --json_path=./path_to_database_json_file.json/ --save_path=./modeos/ 
+python train.py --pretrained_model_path=./models/FR_model --data_path=./data_VMAFplus.pkl --save_path=./exp/stanet/ 
 ```
 
 ### Usage
@@ -56,7 +56,7 @@ python test.py --database=./path_to_database/ --width=1920 --height=1080 --bitDe
 cd STANet
 python data_generation.py --database=./path_to_database/ --width=1920 --height=1080 --bitDepth=8
 
-python test.py --model_path=./exp/stanet/stanet_epoch_20.pth --json_path=./path_to_database_json_file.json/
+python test.py --model_path=./exp/stanet/stanet_epoch_20.pth --json_path=./path_to_database_json_file.json
 ```
 
 
