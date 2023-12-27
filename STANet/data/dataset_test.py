@@ -101,7 +101,6 @@ class VideoQualityDatasettest(Dataset):
             video = torch.cat(video_patches, dim=0).unsqueeze(0).cuda()
             gt = torch.cat(gt_patches, dim=0).unsqueeze(0).cuda()
 
-            print(video.shape,frame_count,dist_path)
             for i in range(0, video.shape[4] - 255, 110):
                 for j in range(0, video.shape[3] - 255, 103):
                     video_patch = video[:, :, :, j:j + 256, i:i + 256]
