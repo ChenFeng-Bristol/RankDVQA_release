@@ -74,7 +74,6 @@ class Dataset(torch.utils.data.Dataset):
 
         if self.booltrain and random.random() < 0.5:
             video1, video2 = video2, video1
-            flow1, flow2 = flow2, flow1
             judge_img = 1 - judge_img
 
 
