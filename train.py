@@ -68,7 +68,7 @@ if __name__ == '__main__':
     objectTrain = torch.utils.data.DataLoader(
         batch_size=objectSettings['intBatchsize'],
         shuffle=True,
-        num_workers=4,
+        num_workers=12,
         drop_last=True,
         dataset=data.dataset.DatasetTrain(
             dataroot=get_dataset_dir(),
