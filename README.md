@@ -42,7 +42,7 @@ python data_generation.py --json_path=./path_to_database_json_file.json/
 ```
 4. Stage2: Run the training codes of STANet
 ```bash
-python train.py --pretrained_model_path=./models/FR_model --json_path=./path_to_database_json_file.json/ --save_path=./modeos/ 
+python train.py --pretrained_model_path=./models/FR_model --json_path=./path_to_database_json_file.json/ --save_path=./exp/stanet/ 
 ```
 
 ### Usage
